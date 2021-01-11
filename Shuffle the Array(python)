@@ -1,0 +1,19 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        """
+        :type nums: List[int]
+        :type n: int
+        :rtype: List[int]
+        """
+        i = 0 
+        j = n
+        res = list()
+        for k in range(n):
+            res.insert(i,nums[k])
+            res.insert(i+1,nums[j])
+            j+=1
+            i+=2
+            
+            
+        return res
+        
