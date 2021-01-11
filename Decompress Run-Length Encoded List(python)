@@ -1,0 +1,15 @@
+class Solution(object):
+    def decompressRLElist(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        res= list()
+        k = 0
+        i = 0
+        while(i<len(nums)):
+            for j in range(nums[i]):
+                res.insert(k,nums[i+1])
+                k+=1
+            i+=2
+        return res
