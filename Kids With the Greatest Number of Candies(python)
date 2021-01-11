@@ -1,0 +1,15 @@
+class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        maxx = max(candies)
+        
+        cnt = 0
+        res = list()
+        for i in candies:
+            if ((i+extraCandies) >= maxx ):
+                res.insert(cnt,True)
+            else:
+                res.insert(cnt,False)
+            cnt += 1
+            
+        return res
+        
