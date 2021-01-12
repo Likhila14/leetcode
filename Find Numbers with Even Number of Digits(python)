@@ -1,0 +1,22 @@
+class Solution(object):
+    def findNumbers(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        cnt = 0
+        ans = 0
+        k =0 
+        for i in range(len(nums)):
+            cnt = 0
+            k = nums[i]
+            while(k>0):   
+                k=k/10
+                cnt+=1
+            if(cnt%2 == 0):
+                ans+=1
+                
+        return ans
+                
+                
+        
