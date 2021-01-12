@@ -1,0 +1,32 @@
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        int row = mat.length;
+         int col = mat[0].length;
+        int n = row ;
+        int k = 0;
+        int x;
+        int principal = 0, secondary = 0; 
+        for (int i = 0; i < n; i++) { 
+            for (int j = 0; j < n; j++) { 
+      
+                
+                if (i == j) 
+                    principal += mat[i][j]; 
+      
+                
+                if ((i + j) == (n - 1)) 
+                    secondary += mat[i][j]; 
+            } 
+        } 
+        if(row == col){
+            if(n%2 == 0){
+                k = principal + secondary ;
+            }
+            else{
+                x = n/2 ;
+                k = (principal + secondary) - mat[x][x] ;
+            }
+        }
+        return ( k );
+    }
+}
