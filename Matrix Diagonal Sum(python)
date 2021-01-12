@@ -1,0 +1,21 @@
+class Solution:
+    def diagonalSum(self, mat):
+        
+		
+        mat_size = len(mat)
+        count = 0
+
+		
+        for i, j in zip(range(mat_size), range(mat_size,0,-1)):
+            count += (mat[i][i])
+            count += (mat[i][j-1])
+	
+		
+        if mat_size%2 == 0:
+            pass
+		
+        else:
+            row = int((mat_size-1)/2)
+            count -= mat[row][row]
+
+        return(count)
