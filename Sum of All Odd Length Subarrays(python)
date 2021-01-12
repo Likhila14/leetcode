@@ -1,0 +1,13 @@
+class Solution:
+    def sumOddLengthSubarrays(self, arr: List[int]) -> int:
+        ans = 0
+        for i in range(len(arr)):
+            j = i
+            while(j<len(arr)):
+                k=i
+                while(k<=j):
+                    ans = ans+arr[k]
+                    k+=1
+                j+=2
+        return ans
+         
