@@ -1,0 +1,23 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        if len(arr) == 1: 
+            arr[0] = -1
+            return arr
+        count = 0
+        l = len(arr)
+        max = 0
+        for i in range(0,l-1):  
+            if count > i:
+                arr[i] = max
+                continue
+            max = 0
+            for j in range(i+1, l):
+                if arr[j] > max:
+                    max = arr[j]
+                    count = j
+                arr[i] = max
+        arr[l-2] = arr[l-1]
+        arr[l-1] = -1
+        return arr 
+                
+        
