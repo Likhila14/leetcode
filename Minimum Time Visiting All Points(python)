@@ -1,0 +1,10 @@
+class Solution:
+    def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
+        res = 0
+        i = 1
+        while(i<len(points)):
+            curr = points[i]
+            prev = points[i-1]
+            res+=max(abs(curr[0]-prev[0]),abs(curr[1]-prev[1]))
+            i+=1
+        return res
