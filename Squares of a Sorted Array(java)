@@ -1,0 +1,8 @@
+class Solution {
+    public int[] sortedSquares(int[] A) {
+        for(int j = 0 ; j< A.length ; j++)
+             A[j] = A[j]*A[j] ;
+        Arrays.sort(A);
+        return A;
+    }
+}
