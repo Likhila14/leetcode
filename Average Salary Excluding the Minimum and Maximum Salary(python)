@@ -1,0 +1,8 @@
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        ans = 0.0
+        salary.sort()
+        for i in range(1,len(salary)-1):
+            ans+=salary[i]
+        return ans/(len(salary)-2)
+        
