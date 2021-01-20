@@ -1,0 +1,9 @@
+class Solution {
+    public double average(int[] sal) {
+        double sum = 0;
+        Arrays.sort(sal);
+        for(int i = 1 ;i<sal.length-1 ; i++)
+            sum+= (int)sal[i];
+        return (sum/(sal.length-2));
+    }
+}
